@@ -88,6 +88,7 @@ RUN set -x && \
   mkdir -p /downloads/video && \
   # Clean up
   rm /app/Pipfile && \
+  rm /app/Pipfile.lock && \
   pipenv --clear && \
   pip3 --disable-pip-version-check uninstall -y pipenv wheel virtualenv && \
   apt-get -y autoremove --purge \
